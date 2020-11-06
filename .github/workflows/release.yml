@@ -3,7 +3,9 @@ on:
   release:
     types: [published]
   workflow_dispatch:
-    inputs: {}
+    inputs:
+      fake_input:
+        description: "fake"
 
 jobs:
   push_to_registry:
