@@ -2,6 +2,7 @@ FROM ubuntu:20.04
 
 LABEL maintainer="SwiftWasm Maintainers <hello@swiftwasm.org>"
 LABEL Description="Docker Container for the SwiftWasm toolchain and SDK"
+LABEL org.opencontainers.image.source https://github.com/swiftwasm/swiftwasm-docker
 
 RUN export DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true && apt-get -q update && \
     apt-get -q install -y \
