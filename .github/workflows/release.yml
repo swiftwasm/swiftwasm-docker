@@ -1,11 +1,7 @@
 name: Publish Docker image
 on:
-  release:
-    types: [published]
-  workflow_dispatch:
-    inputs:
-      fake_input:
-        description: "fake"
+  push:
+    branches: [master]
 
 jobs:
   push_to_registry:
