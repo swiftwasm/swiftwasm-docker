@@ -23,15 +23,15 @@ jobs:
           file: ./5.3/ubuntu/20.04/Dockerfile
           push: true
           tags: |
-            swiftwasm/swift:5.3-focal
-            swiftwasm/swift:focal
+            ghcr.io/swiftwasm/swift:5.3-focal
+            ghcr.io/swiftwasm/swift:focal
       - name: Push 5.3/ubuntu/18.04/Dockerfile
         uses: docker/build-push-action@v2
         with:
           file: ./5.3/ubuntu/18.04/Dockerfile
           push: true
           tags: |
-            swiftwasm/swift:5.3
-            swiftwasm/swift:5.3-bionic
-            swiftwasm/swift:bionic
-            swiftwasm/swift:latest
+            ghcr.io/swiftwasm/swift:5.3
+            ghcr.io/swiftwasm/swift:5.3-bionic
+            ghcr.io/swiftwasm/swift:bionic
+            ghcr.io/swiftwasm/swift:latest
