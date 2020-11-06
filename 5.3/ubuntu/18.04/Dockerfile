@@ -23,7 +23,7 @@ RUN export DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true && ap
     && rm -r /var/lib/apt/lists/*
 
 
-ARG SWIFT_TAG=swift-wasm-5.3-SNAPSHOT-2020-11-02-a
+ARG SWIFT_TAG=swift-wasm-5.3.0-RELEASE
 ENV SWIFT_PLATFORM_SUFFIX=ubuntu18.04_x86_64.tar.gz
 ENV SWIFT_TAG=$SWIFT_TAG
 
