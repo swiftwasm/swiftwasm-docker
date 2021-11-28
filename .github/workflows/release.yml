@@ -17,21 +17,21 @@ jobs:
           registry: ghcr.io
           username: ${{ github.repository_owner }}
           password: ${{ secrets.SWIFTWASM_PERSONAL_TOKEN }}
-      - name: Push 5.4/ubuntu/20.04/Dockerfile
+      - name: Push 5.5/ubuntu/20.04/Dockerfile
         uses: docker/build-push-action@v2
         with:
-          file: ./5.4/ubuntu/20.04/Dockerfile
+          file: ./5.5/ubuntu/20.04/Dockerfile
           push: true
           tags: |
-            ghcr.io/swiftwasm/swift:5.4-focal
+            ghcr.io/swiftwasm/swift:5.5-focal
             ghcr.io/swiftwasm/swift:focal
-      - name: Push 5.4/ubuntu/18.04/Dockerfile
+      - name: Push 5.5/ubuntu/18.04/Dockerfile
         uses: docker/build-push-action@v2
         with:
-          file: ./5.4/ubuntu/18.04/Dockerfile
+          file: ./5.5/ubuntu/18.04/Dockerfile
           push: true
           tags: |
-            ghcr.io/swiftwasm/swift:5.4
-            ghcr.io/swiftwasm/swift:5.4-bionic
+            ghcr.io/swiftwasm/swift:5.5
+            ghcr.io/swiftwasm/swift:5.5-bionic
             ghcr.io/swiftwasm/swift:bionic
             ghcr.io/swiftwasm/swift:latest
