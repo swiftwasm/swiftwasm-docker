@@ -7,6 +7,8 @@ LABEL org.opencontainers.image.source https://github.com/swiftwasm/swiftwasm-doc
 RUN export DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true && apt-get -q update && \
     apt-get -q install -y \
     gcc-8 \
+    g++-8 \
+    libstdc++-8-dev \
     libatomic1 \
     libcurl4 \
     libxml2 \
