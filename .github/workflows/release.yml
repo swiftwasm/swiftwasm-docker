@@ -11,13 +11,6 @@ jobs:
       fail-fast: true
       matrix:
         include:
-          - dockerfile: ./5.6/ubuntu/18.04/Dockerfile,
-            tags:
-              - ghcr.io/swiftwasm/swift:5.6-bionic
-              - ghcr.io/swiftwasm/swift:5.6
-          - dockerfile: ./5.6/ubuntu/20.04/Dockerfile
-            tags:
-              - ghcr.io/swiftwasm/swift:5.6-focal
           - dockerfile: ./5.7/ubuntu/18.04/Dockerfile
             tags:
               - ghcr.io/swiftwasm/swift:5.7-bionic
