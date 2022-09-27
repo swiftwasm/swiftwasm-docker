@@ -21,10 +21,6 @@ jobs:
             tags:
               - ghcr.io/swiftwasm/swift:5.7-focal
               - ghcr.io/swiftwasm/swift:focal
-          - dockerfile: ./5.7/ubuntu/22.04/Dockerfile
-            tags:
-              - ghcr.io/swiftwasm/swift:5.7-focal
-              - ghcr.io/swiftwasm/swift:jammy
     steps:
       - uses: actions/checkout@v3
       - name: Set up Docker Buildx
