@@ -1,0 +1,36 @@
+name: Publish Docker CI image
+on:
+  workflow_dispatch: {}
+
+jobs:
+  push_to_registry:
+    name: Push Docker image to GitHub Packages
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: true
+      matrix:
+        include:
+          - dockerfile: https://raw.githubusercontent.com/apple/swift-docker/main/swift-ci/master/ubuntu/18.04/Dockerfile
+            tags:
+              - ghcr.io/swiftwasm/swift-ci:main-ubuntu-18.04
+          - dockerfile: https://raw.githubusercontent.com/apple/swift-docker/main/swift-ci/master/ubuntu/20.04/Dockerfile
+            tags:
+              - ghcr.io/swiftwasm/swift-ci:main-ubuntu-20.04
+          - dockerfile: https://raw.githubusercontent.com/apple/swift-docker/main/swift-ci/master/ubuntu/22.04/Dockerfile
+            tags:
+              - ghcr.io/swiftwasm/swift-ci:main-ubuntu-22.04
+    steps:
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+      - name: Login to DockerHub
+        uses: docker/login-action@v2
+        with:
+          registry: ghcr.io
+          username: ${{ github.repository_owner }}
+          password: ${{ secrets.SWIFTWASM_PERSONAL_TOKEN }}
+      - name: Push ${{ matrix.dockerfile }}
+        uses: docker/build-push-action@v3
+        with:
+          file: ${{ matrix.dockerfile }}
+          push: true
+          tags: ${{ join(matrix.tags, ',') }}
