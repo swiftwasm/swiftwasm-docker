@@ -10,13 +10,13 @@ jobs:
       fail-fast: true
       matrix:
         include:
-          - dockerfile: https://raw.githubusercontent.com/apple/swift-docker/main/swift-ci/master/ubuntu/18.04/Dockerfile
+          - dockerfile: swift-ci/main/ubuntu/18.04/Dockerfile
             tags:
               - ghcr.io/swiftwasm/swift-ci:main-ubuntu-18.04
-          - dockerfile: swift-ci/main/ubuntu/Dockerfile
+          - dockerfile: swift-ci/main/ubuntu/20.04/Dockerfile
             tags:
               - ghcr.io/swiftwasm/swift-ci:main-ubuntu-20.04
-          - dockerfile: https://raw.githubusercontent.com/apple/swift-docker/main/swift-ci/master/ubuntu/22.04/Dockerfile
+          - dockerfile: swift-ci/main/ubuntu/22.04/Dockerfile
             tags:
               - ghcr.io/swiftwasm/swift-ci:main-ubuntu-22.04
     steps:
