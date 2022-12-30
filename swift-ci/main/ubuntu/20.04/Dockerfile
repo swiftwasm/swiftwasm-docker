@@ -37,6 +37,9 @@ RUN apt-get install -y \
   # FIXME(katei): libtinfo.so.5 is required for old wasmer. See https://github.com/wasmerio/wasmer/issues/1651
   libtinfo5
 
+COPY ./swift-ci/main/install-extra-packages.sh /tmp/install-extra-packages.sh
+RUN /tmp/install-extra-packages.sh wasmer cmake sccache && rm /tmp/install-extra-packages.sh
+
 USER build-user
 
 WORKDIR /home/build-user

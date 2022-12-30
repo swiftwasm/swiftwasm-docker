@@ -21,7 +21,7 @@ jobs:
           - dockerfile: swift-ci/main/ubuntu/22.04/Dockerfile
             tags:
               - ghcr.io/swiftwasm/swift-ci:main-ubuntu-22.04
-          - dockerfile: https://raw.githubusercontent.com/apple/swift-docker/main/swift-ci/master/amazon-linux/2/Dockerfile
+          - dockerfile: swift-ci/main/amazon-linux/2/Dockerfile
             tags:
               - ghcr.io/swiftwasm/swift-ci:main-amazon-linux-2
     steps:
@@ -37,6 +37,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           platforms: linux/amd64,linux/arm64
+          context: .
           file: ${{ matrix.dockerfile }}
           push: true
           tags: ${{ join(matrix.tags, ',') }}
