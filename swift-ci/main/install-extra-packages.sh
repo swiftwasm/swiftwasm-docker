@@ -1,6 +1,6 @@
 install_wasmer() {
   export WASMER_DIR="${WASMER_DIR:-/opt/wasmer}"
-  curl https://get.wasmer.io -sSfL | sh -s "2.1.1"
+  curl https://get.wasmer.io -sSfL | sh -s "2.3.0"
   ln -sf "$WASMER_DIR/bin/wasmer" "$PREFIX/bin/wasmer"
 }
 
