@@ -41,6 +41,9 @@ RUN yum -y install \
   wget             \
   which
 
+# Install ninja-build to save build-time
+RUN yum -y install ninja-build && ln -s /usr/bin/ninja-build /usr/bin/ninja
+
 RUN mkdir -p /usr/local/lib/python3.7/site-packages/
 
 RUN easy_install-3.7 six
