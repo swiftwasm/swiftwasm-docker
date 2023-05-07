@@ -11,16 +11,20 @@ jobs:
       fail-fast: true
       matrix:
         include:
-          - dockerfile: ./5.7/ubuntu/18.04/Dockerfile
+          - dockerfile: ./5.8/ubuntu/18.04/Dockerfile
             tags:
-              - ghcr.io/swiftwasm/swift:5.7-bionic
-              - ghcr.io/swiftwasm/swift:bionic
-              - ghcr.io/swiftwasm/swift:5.7
-              - ghcr.io/swiftwasm/swift:latest
-          - dockerfile: ./5.7/ubuntu/20.04/Dockerfile
+              - ghcr.io/swiftwasm/swift:5.8-bionic
+            # - ghcr.io/swiftwasm/swift:bionic
+          - dockerfile: ./5.8/ubuntu/20.04/Dockerfile
             tags:
-              - ghcr.io/swiftwasm/swift:5.7-focal
-              - ghcr.io/swiftwasm/swift:focal
+              - ghcr.io/swiftwasm/swift:5.8-focal
+            # - ghcr.io/swiftwasm/swift:focal
+          - dockerfile: ./5.8/ubuntu/22.04/Dockerfile
+            tags:
+              - ghcr.io/swiftwasm/swift:5.8-jammy
+            # - ghcr.io/swiftwasm/swift:jammy
+              - ghcr.io/swiftwasm/swift:5.8
+            # - ghcr.io/swiftwasm/swift:latest
     steps:
       - uses: actions/checkout@v3
       - name: Set up Docker Buildx
