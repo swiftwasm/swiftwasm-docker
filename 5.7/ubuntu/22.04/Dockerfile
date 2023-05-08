@@ -24,8 +24,8 @@ RUN export DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true && ap
     && rm -r /var/lib/apt/lists/*
 
 
-ARG SWIFT_TAG=swift-wasm-5.8.0-RELEASE
-ENV SWIFT_PLATFORM_SUFFIX=ubuntu22.04_x86_64.tar.gz
+ARG SWIFT_TAG=swift-wasm-5.7.3-RELEASE
+ENV SWIFT_PLATFORM_SUFFIX=ubuntu20.04_x86_64.tar.gz
 ENV SWIFT_TAG=$SWIFT_TAG
 
 RUN set -e; \
