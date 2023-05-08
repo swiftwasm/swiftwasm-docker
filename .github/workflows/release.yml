@@ -17,12 +17,12 @@ jobs:
               - ghcr.io/swiftwasm/swift:5.8-bionic
               - ghcr.io/swiftwasm/swift:bionic
           - dockerfile: ./5.8/ubuntu/20.04/Dockerfile
-            platforms: 'linux/amd64'
+            platforms: 'linux/amd64,linux/arm64'
             tags:
               - ghcr.io/swiftwasm/swift:5.8-focal
               - ghcr.io/swiftwasm/swift:focal
           - dockerfile: ./5.8/ubuntu/22.04/Dockerfile
-            platforms: 'linux/amd64,linux/arm64'
+            platforms: 'linux/amd64'
             tags:
               - ghcr.io/swiftwasm/swift:5.8-jammy
               - ghcr.io/swiftwasm/swift:jammy
