@@ -1,6 +1,8 @@
 name: Publish Docker CI image
 on:
   workflow_dispatch: {}
+  pull_request:
+    branches: [main]
   push:
     branches: [main]
 
@@ -39,5 +41,5 @@ jobs:
           platforms: linux/amd64,linux/arm64
           context: .
           file: ${{ matrix.dockerfile }}
-          push: true
+          push: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
           tags: ${{ join(matrix.tags, ',') }}
