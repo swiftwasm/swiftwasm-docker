@@ -34,12 +34,10 @@ RUN apt-get -y update && apt-get -y install \
 
 RUN apt-get install -y \
   # FIXME(katei): curl cli dependency is required for downloading build-sdk at build-time
-  curl                 \
-  # FIXME(katei): libtinfo.so.5 is required for old wasmer. See https://github.com/wasmerio/wasmer/issues/1651
-  libtinfo5
+  curl
 
 COPY ./swift-ci/main/install-extra-packages.sh /tmp/install-extra-packages.sh
-RUN /tmp/install-extra-packages.sh wasmer cmake sccache && rm /tmp/install-extra-packages.sh
+RUN /tmp/install-extra-packages.sh wasmtime cmake sccache && rm /tmp/install-extra-packages.sh
 
 USER build-user
 
