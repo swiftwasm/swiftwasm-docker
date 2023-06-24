@@ -1,7 +1,7 @@
-install_wasmer() {
-  export WASMER_DIR="${WASMER_DIR:-/opt/wasmer}"
-  curl https://get.wasmer.io -sSfL | sh -s "2.3.0"
-  ln -sf "$WASMER_DIR/bin/wasmer" "$PREFIX/bin/wasmer"
+install_wasmtime() {
+  export WASMTIME_HOME="${WASMTIME_HOME:-$PREFIX/wasmtime}"
+  curl https://wasmtime.dev/install.sh -sSf | bash /dev/stdin --version v10.0.1
+  ln -sf "$WASMTIME_HOME/bin/wasmtime" "$PREFIX/bin/wasmtime"
 }
 
 install_cmake() {
