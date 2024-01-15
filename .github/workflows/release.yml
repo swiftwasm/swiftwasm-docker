@@ -15,19 +15,19 @@ jobs:
             platforms: 'linux/amd64'
             tags:
               - ghcr.io/swiftwasm/swift:5.9-bionic
-              - ghcr.io/swiftwasm/swift:bionic
+            # - ghcr.io/swiftwasm/swift:bionic
           - dockerfile: ./5.9/ubuntu/20.04/Dockerfile
             platforms: 'linux/amd64,linux/arm64'
             tags:
               - ghcr.io/swiftwasm/swift:5.9-focal
-              - ghcr.io/swiftwasm/swift:focal
+            # - ghcr.io/swiftwasm/swift:focal
           - dockerfile: ./5.9/ubuntu/22.04/Dockerfile
             platforms: 'linux/amd64'
             tags:
               - ghcr.io/swiftwasm/swift:5.9-jammy
-              - ghcr.io/swiftwasm/swift:jammy
+            # - ghcr.io/swiftwasm/swift:jammy
               - ghcr.io/swiftwasm/swift:5.9
-              - ghcr.io/swiftwasm/swift:latest
+            # - ghcr.io/swiftwasm/swift:latest
     steps:
       - uses: actions/checkout@v3
       - name: Set up Docker Buildx
