@@ -31,6 +31,7 @@ RUN apt -y update && apt -y install \
   systemtap-sdt-dev     \
   tzdata                \
   unzip                 \
+  zip                   \
   uuid-dev
 
 ARG SWIFT_PLATFORM=ubuntu18.04

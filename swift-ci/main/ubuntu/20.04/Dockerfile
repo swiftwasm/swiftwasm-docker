@@ -30,6 +30,7 @@ RUN apt-get -y update && apt-get -y install \
   systemtap-sdt-dev     \
   tzdata                \
   unzip                 \
+  zip                   \
   uuid-dev
 
 ARG SWIFT_PLATFORM=ubuntu20.04
