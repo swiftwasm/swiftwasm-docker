@@ -5,6 +5,7 @@ on:
     branches: [main]
   push:
     branches: [main]
+    paths: ["swift-ci/**"]
 
 jobs:
   push_to_registry:

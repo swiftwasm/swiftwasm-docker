@@ -1,7 +1,11 @@
 name: Publish Docker image
 on:
+  workflow_dispatch: {}
+  pull_request:
+    branches: [main]
   push:
     branches: [main]
+    paths-ignore: ["swift-ci/**"]
 
 jobs:
   push_to_registry:
