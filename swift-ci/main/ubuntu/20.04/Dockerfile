@@ -31,6 +31,7 @@ RUN apt-get -y update && apt-get -y install \
   tzdata                \
   unzip                 \
   zip                   \
+  zlib1g-dev            \
   uuid-dev
 
 ARG SWIFT_PLATFORM=ubuntu20.04

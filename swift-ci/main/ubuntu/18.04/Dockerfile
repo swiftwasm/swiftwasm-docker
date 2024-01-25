@@ -32,6 +32,7 @@ RUN apt -y update && apt -y install \
   tzdata                \
   unzip                 \
   zip                   \
+  zlib1g-dev            \
   uuid-dev
 
 ARG SWIFT_PLATFORM=ubuntu18.04
