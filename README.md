@@ -12,9 +12,12 @@ docker pull ghcr.io/swiftwasm/swift:latest
 
 ## Supported tags and respective Dockerfile links
 
-- [5.9, 5.9-jammy, jammy, latest](https://github.com/swiftwasm/swiftwasm-docker/blob/main/5.9/ubuntu/22.04/Dockerfile)
-- [5.9-focal, focal](https://github.com/swiftwasm/swiftwasm-docker/blob/main/5.9/ubuntu/20.04/Dockerfile)
-- [5.9-bionic, bionic](https://github.com/swiftwasm/swiftwasm-docker/blob/main/5.9/ubuntu/18.04/Dockerfile)
+- [5.10, 5.10-jammy, jammy, latest](https://github.com/swiftwasm/swiftwasm-docker/blob/main/5.10/ubuntu/22.04/Dockerfile)
+- [5.10-focal, focal](https://github.com/swiftwasm/swiftwasm-docker/blob/main/5.10/ubuntu/20.04/Dockerfile)
+- [5.10-bionic, bionic](https://github.com/swiftwasm/swiftwasm-docker/blob/main/5.10/ubuntu/18.04/Dockerfile)
+- [5.9, 5.9-jammy](https://github.com/swiftwasm/swiftwasm-docker/blob/main/5.9/ubuntu/22.04/Dockerfile)
+- [5.9-focal](https://github.com/swiftwasm/swiftwasm-docker/blob/main/5.9/ubuntu/20.04/Dockerfile)
+- [5.9-bionic](https://github.com/swiftwasm/swiftwasm-docker/blob/main/5.9/ubuntu/18.04/Dockerfile)
 - [5.8, 5.8-jammy](https://github.com/swiftwasm/swiftwasm-docker/blob/main/5.8/ubuntu/22.04/Dockerfile)
 - [5.8-focal](https://github.com/swiftwasm/swiftwasm-docker/blob/main/5.8/ubuntu/20.04/Dockerfile)
 - [5.8-bionic](https://github.com/swiftwasm/swiftwasm-docker/blob/main/5.8/ubuntu/18.04/Dockerfile)
