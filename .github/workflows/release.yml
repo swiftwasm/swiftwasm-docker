@@ -15,22 +15,22 @@ jobs:
       fail-fast: true
       matrix:
         include:
-          - dockerfile: ./5.9/ubuntu/18.04/Dockerfile
+          - dockerfile: ./5.10/ubuntu/18.04/Dockerfile
             platforms: 'linux/amd64'
             tags:
-              - ghcr.io/swiftwasm/swift:5.9-bionic
+              - ghcr.io/swiftwasm/swift:5.10-bionic
               - ghcr.io/swiftwasm/swift:bionic
-          - dockerfile: ./5.9/ubuntu/20.04/Dockerfile
+          - dockerfile: ./5.10/ubuntu/20.04/Dockerfile
             platforms: 'linux/amd64,linux/arm64'
             tags:
-              - ghcr.io/swiftwasm/swift:5.9-focal
+              - ghcr.io/swiftwasm/swift:5.10-focal
               - ghcr.io/swiftwasm/swift:focal
-          - dockerfile: ./5.9/ubuntu/22.04/Dockerfile
+          - dockerfile: ./5.10/ubuntu/22.04/Dockerfile
             platforms: 'linux/amd64'
             tags:
-              - ghcr.io/swiftwasm/swift:5.9-jammy
+              - ghcr.io/swiftwasm/swift:5.10-jammy
               - ghcr.io/swiftwasm/swift:jammy
-              - ghcr.io/swiftwasm/swift:5.9
+              - ghcr.io/swiftwasm/swift:5.10
               - ghcr.io/swiftwasm/swift:latest
     steps:
       - uses: actions/checkout@v3
