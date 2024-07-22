@@ -5,7 +5,7 @@ install_wasmtime() {
 }
 
 install_cmake() {
-  local version="3.22.1"
+  local version="3.29.7"
   local workdir="$(mktemp -d)"
   curl -L -o "$workdir/install_cmake.sh" "https://github.com/Kitware/CMake/releases/download/v$version/cmake-$version-linux-$(uname -m).sh"
   chmod +x "$workdir/install_cmake.sh"
