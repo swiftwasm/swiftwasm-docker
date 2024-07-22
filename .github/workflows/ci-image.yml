@@ -16,15 +16,19 @@ jobs:
       matrix:
         include:
           - dockerfile: swift-ci/main/ubuntu/18.04/Dockerfile
+            platforms: linux/amd64,linux/arm64
             tags:
               - ghcr.io/swiftwasm/swift-ci:main-ubuntu-18.04
           - dockerfile: swift-ci/main/ubuntu/20.04/Dockerfile
+            platforms: linux/amd64,linux/arm64
             tags:
               - ghcr.io/swiftwasm/swift-ci:main-ubuntu-20.04
           - dockerfile: swift-ci/main/ubuntu/22.04/Dockerfile
+            platforms: linux/amd64,linux/arm64
             tags:
               - ghcr.io/swiftwasm/swift-ci:main-ubuntu-22.04
           - dockerfile: swift-ci/main/amazon-linux/2/Dockerfile
+            platforms: linux/amd64
             tags:
               - ghcr.io/swiftwasm/swift-ci:main-amazon-linux-2
     steps:
@@ -39,7 +43,7 @@ jobs:
       - name: Push ${{ matrix.dockerfile }}
         uses: docker/build-push-action@v3
         with:
-          platforms: linux/amd64,linux/arm64
+          platforms: ${{ matrix.platforms }}
           context: .
           file: ${{ matrix.dockerfile }}
           push: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
