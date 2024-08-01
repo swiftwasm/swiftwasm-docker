@@ -12,7 +12,7 @@ jobs:
     name: Push Docker image to GitHub Packages
     runs-on: ubuntu-latest
     strategy:
-      fail-fast: true
+      fail-fast: false
       matrix:
         include:
           - dockerfile: swift-ci/main/ubuntu/18.04/Dockerfile
