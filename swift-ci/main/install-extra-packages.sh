@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 install_wasmtime() {
   export WASMTIME_HOME="${WASMTIME_HOME:-$PREFIX/wasmtime}"
   curl https://wasmtime.dev/install.sh -sSf | bash /dev/stdin --version v10.0.1
