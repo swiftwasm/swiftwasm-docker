@@ -2,7 +2,7 @@
 
 install_wasmtime() {
   export WASMTIME_HOME="${WASMTIME_HOME:-$PREFIX/wasmtime}"
-  curl https://wasmtime.dev/install.sh -sSf | bash /dev/stdin --version v10.0.1
+  curl https://wasmtime.dev/install.sh -sSf | bash /dev/stdin --version v17.0.1
   ln -sf "$WASMTIME_HOME/bin/wasmtime" "$PREFIX/bin/wasmtime"
 }
 
