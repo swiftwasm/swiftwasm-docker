@@ -46,5 +46,5 @@ jobs:
           platforms: ${{ matrix.platforms }}
           context: .
           file: ${{ matrix.dockerfile }}
-          push: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
+          push: ${{ (github.event_name == 'push' && github.ref == 'refs/heads/main') || github.event_name == 'workflow_dispatch' }}
           tags: ${{ join(matrix.tags, ',') }}
