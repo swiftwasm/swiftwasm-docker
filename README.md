@@ -1,5 +1,12 @@
 # swiftwasm-docker
 
+> [!WARNING]
+> We stopped distributing Docker images since Swift 6.0. Please use [our new Swift SDKs](https://book.swiftwasm.org/getting-started/setup.html) with the official Swift images instead.
+> ```dockerfile
+> FROM swift:6.0.3
+> RUN swift sdk install "https://github.com/swiftwasm/swift/releases/download/swift-wasm-6.0.3-RELEASE/swift-wasm-6.0.3-RELEASE-wasm32-unknown-wasi.artifactbundle.zip" --checksum "31d3585b06dd92de390bacc18527801480163188cd7473f492956b5e213a8618"
+> ```
+
 ### Docker images for [SwiftWasm](https://swiftwasm.org).
 
 ### Usage
